@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Importar la fuente Montserrat desde Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Indice -->
+    <nav class="indice">
+      <h2>Índice de Contenidos</h2>
+      <ul>
+        <li>
+          <a href="#fundamentos">Fundamentos de HTML</a>
+          <ul>
+            <li><a href="#que-es-html">¿Qué es HTML?</a></li>
+            <li>
+              <a href="#proceso-renderizado"
+                >Proceso de renderizado del motor del navegador</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#maquetacion">Maquetación</a>
+          <ul>
+            <li><a href="#elementos-no-vacios">Elementos no vacíos</a></li>
+            <li><a href="#elementos-vacios">Elementos vacíos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="contenido-principal">
+      <!-- Titulo -->
+      <h1 id="titulo-principal">CSS (Cascading Style Sheets)</h1>
+
+      <!-- Fundamentos -->
+      <h2>Fundamentos</h2>
+      <hr />
+
+      <h3><em>¿Qué es CSS?</em></h3>
+      <p>
+        CSS (Cascading Style Sheets) es un lenguaje de estilos utilizado para
+        describir la presentación de un documento HTML. Permite aplicar estilos
+        a elementos HTML, como colores, fuentes, márgenes y diseño en general.
+      </p>
+      <p>
+        <strong>Nota:</strong> Para poder agregar estilos en el archivo HTML es
+        necesario en el head agregar,
+        <code>&lt;link rel= "stylesheet" href = "style.css"&gt;</code>.
+      </p>
+
+      <h3><em>Maquetación</em></h3>
+      <p>
+        Una declaración de CSS es un bloque que especifica el conjunto de
+        estilos que se añadirán a un elemento HTML. Su estructura contiene lo
+        siguiente:
+      </p>
+      <ul>
+        <li>
+          Selector: define el elemento o conjunto de elementos a los cuales se
+          añadirán los estilos
+        </li>
+        <li>Propiedad: es el nombre del estilo de CSS</li>
+        <li>Valor: es el valor asignado a la propiedad</li>
+      </ul>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        h1 &#123;<br />
+        &nbsp;&nbsp; color: blue;<br />
+        &#125;
+      </div>
+
+      <p>
+        En este ejemplo, el h1 es el selector, el color sería la propiedad y el
+        valor sería blue.
+      </p>
+
+      <h3><em>Selectores basicos</em></h3>
+      <p>Los selectores básicos en CSS son:</p>
+      <ul>
+        <li>
+          Selector de tipo: selecciona elementos por su nombre de etiqueta (p,
+          h1, div, etc.)
+        </li>
+        <li>
+          Selector de clase: selecciona elementos por su atributo class (
+          .mi-clase)
+        </li>
+        <li>
+          Selector de ID: selecciona un elemento único por su atributo id (
+          #mi-id)
+        </li>
+        <li>
+          Selector de atributo: selecciona elementos por un atributo específico
+          ( a[href="ejemplo"])
+        </li>
+        <li>Selector universal: selecciona todos los elementos ( *)</li>
+      </ul>
+
+      <h3><em>Selectores combinadores</em></h3>
+      <p>
+        Un selector combinador es la combinación de dos o más selectores para
+        seleccionar elementos que cumplen con múltiples criterios. Los
+        combinadores más comunes son:
+      </p>
+
+      <ul>
+        <li>
+          Combinador descendente (espacio): selecciona elementos que son
+          descendientes de otro elemento (ejemplo: div p)
+        </li>
+        <li>
+          Combinador hijo (>): selecciona elementos que son hijos directos de
+          otro elemento (ejemplo: div > p)
+        </li>
+        <li>
+          Combinador adyacente (+): selecciona un elemento que es inmediatamente
+          siguiente a otro (ejemplo: h1 + p)
+        </li>
+        <li>
+          Combinador general (~): selecciona elementos que son hermanos de otro
+          elemento (ejemplo: h1 ~ p)
+        </li>
+      </ul>
+
+      <h3><em>Especificidad</em></h3>
+      <p>
+        En algún punto, cuando estés creando una página web, te encontrarás con
+        problemas con los estilos, por ejemplo: ¿Por qué no se aplica el color
+        que le estoy poniendo? ¿Por qué este elemento se comporta de manera
+        diferente? Probablemente, sea un inconveniente de cascada o
+        especificidad
+      </p>
+      <p>
+        La cascada es el concepto que determina qué estilos se colocan sobre
+        otros, priorizando a aquellos que se encuentren más abajo del código.
+        Recordarás que CSS es la abreviación de Cascade Style Sheets, que
+        traducido es hojas de estilos en Cascada. Por lo tanto, si al principio
+        del código decimos que los h1 van a tener un cierto color y después
+        decimos que van a tener otro color, entonces tendrán el último color que
+        se les asigne.
+      </p>
+      <p>
+        La especificidad consiste en dar un valor a una regla CSS sobre qué tan
+        específico es el estilo, esto para que los navegadores puedan saber qué
+        estilos aplicar sobre otros, independientemente de dónde se encuentren
+        en el código. El estilo se aplicará donde la especificidad sea mayor
+      </p>
+      <p>Tipos de especificidad:</p>
+      <ul>
+        <li>Especificidad de tipo: 1 punto</li>
+        <li>Especificidad de clase: 10 puntos</li>
+        <li>Especificidad de ID: 100 puntos</li>
+        <li>Especificidad en línea: 1000 puntos</li>
+        <li>Especificidad !important: 10000 puntos</li>
+      </ul>
+    </div>
+  </body>
+</html>
