@@ -164,6 +164,814 @@
         <li>Especificidad en línea: 1000 puntos</li>
         <li>Especificidad !important: 10000 puntos</li>
       </ul>
+
+      <h3><em>Pseudoclases</em></h3>
+      <p>
+        Una pseudoclase define el estilo de un estado especial de un elemento.
+        la sintaxis es la siguiente:
+      </p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        <code> selector:pseudoclase &#123; propiedad: valor; &#125; </code>
+      </div>
+
+      <p>Las pseudoclases más comunes son:</p>
+      <ul>
+        <li>:hover: se activa cuando el ratón está sobre el elemento</li>
+        <li>:focus: se activa cuando el elemento tiene el foco</li>
+        <li>
+          :active: se activa cuando el elemento está siendo activado (por
+          ejemplo, al hacer clic)
+        </li>
+        <li>:visited: se activa cuando un enlace ha sido visitado</li>
+        <li>
+          :not(): se activa cuando un elemento no coincide con un selector
+        </li>
+        <li>:nth-child(n): se activa en el enésimo hijo de un elemento</li>
+      </ul>
+
+      <h3><em>Pseudoelementos</em></h3>
+      <p>
+        Un pseudoelemento permite aplicar estilos a una parte específica de un
+        elemento. La sintaxis es la siguiente:
+      </p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        <code> selector::pseudoelemento &#123; propiedad: valor; &#125; </code>
+      </div>
+
+      <p>Los pseudoelementos más comunes son:</p>
+      <ul>
+        <li>
+          ::before: se utiliza para insertar contenido antes del contenido de un
+          elemento
+        </li>
+        <li>
+          ::after: se utiliza para insertar contenido después del contenido de
+          un elemento
+        </li>
+        <li>::first-line: se aplica al primer renglón de un bloque de texto</li>
+        <li>
+          ::first-letter: se aplica a la primera letra de un bloque de texto
+        </li>
+      </ul>
+
+      <h3><em>Variables</em></h3>
+      <p>
+        Las variables en CSS permiten almacenar valores reutilizables para
+        propiedades de estilo. Se definen utilizando la sintaxis de
+        <code>--nombre-variable: valor;</code> dentro de un selector, y se
+        utilizan con la función <code>var(--nombre-variable)</code>.
+      </p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        :root &#123;<br />
+        &nbsp;&nbsp; <span style="color: red">--color-primario: #3498db;</span
+        ><br />
+        &nbsp;&nbsp; <span style="color: red">--margen-estandar: 16px;</span
+        ><br />
+        &#125;<br /><br />
+        .boton &#123;<br />
+        &nbsp;&nbsp; background-color:
+        <span style="color: red">var(--color-primario);</span><br />
+        &nbsp;&nbsp; margin:
+        <span style="color: red">var(--margen-estandar);</span><br />
+        &#125;
+      </div>
+      <p>
+        <strong>Nota: </strong> Estas se guardan en root y comienzan siempre con
+        doble guion
+      </p>
+
+      <h3><em>Fuentes</em></h3>
+      <p>pasos para cargar una fuente externa:</p>
+      <ol>
+        <li>
+          Elegir una fuente de un servicio de fuentes web (por ejemplo, Google
+          Fonts).
+        </li>
+        <li>
+          Incluir el enlace de la fuente en la sección
+          <code>&lt;head&gt;</code> de tu HTML.
+        </li>
+        <li>Aplicar la fuente a los elementos deseados utilizando CSS.</li>
+      </ol>
+
+      <h3><em>Comentarios en CSS</em></h3>
+      <p>
+        Los comentarios de CSS consisten en señalar algo que se ignorará. Para
+        establecer un comentario CSS se lo envuelve entre /* y */, independiente
+        de la cantidad de líneas
+      </p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        <code> /* Este es un comentario */ </code>
+      </div>
+      <p>
+        <strong>Nota: </strong> se puede usar control + / para comentar o
+        descomentar líneas en muchos editores de código.
+      </p>
+
+      <!-- propiedades con más uso -->
+      <h2>Propiedades con más uso</h2>
+      <hr />
+
+      <h3><em>Propiedades de texto</em></h3>
+      <ul>
+        <li>
+          <strong>color</strong>: Establece el color del texto.
+          <code style="color: red">color: red;</code>
+        </li>
+        <li>
+          <strong>font-size</strong>: Establece el tamaño de la fuente.
+          <code style="color: red">font-size: 16px;</code>
+        </li>
+        <li>
+          <strong>font-family</strong>: Establece la familia de fuentes.
+          <code style="color: red">font-family: Arial, sans-serif;</code>
+        </li>
+        <li>
+          <strong>font-weight</strong>: Establece el grosor de la fuente, con
+          valores de 100 a 900.
+          <code style="color: red">font-weight: 400;</code>
+        </li>
+        <li>
+          <strong>font-style</strong>: Establece el estilo de la fuente.
+          <code style="color: red">font-style: italic;</code>
+        </li>
+        <li>
+          <strong>color</strong>: Establece el color del texto.
+          <code style="color: red">color: red;</code>
+        </li>
+        <li>
+          <strong>line-height</strong>: establece cómo será el interlineado de
+          la fuente, es decir, el interlineado es la altura entre una línea y
+          otra línea.
+          <code style="color: red">line-height: 1.5;</code>
+        </li>
+        <li>
+          <strong>text-align</strong>: Establece la alineación del texto. Puede
+          tomar los valores left, right, center o justify.
+          <code style="color: red">text-align: center;</code>
+        </li>
+        <li>
+          <strong>letter-spacing</strong>: Establece el espacio entre las
+          letras.
+          <code style="color: red">letter-spacing: 2px;</code>
+        </li>
+        <li>
+          <strong>word-spacing</strong>: Establece el espacio entre las
+          palabras.
+          <code style="color: red">word-spacing: 4px;</code>
+        </li>
+        <li>
+          <strong>text-transform</strong>: Establece la transformación del texto
+          (mayúsculas, minúsculas, etc.). Los valores que puede tomar son: none,
+          capitalize, uppercase y lowercase.
+          <code style="color: red">text-transform: uppercase;</code>
+        </li>
+        <li>
+          <strong>text-decoration</strong>: Establece la decoración del texto
+          (subrayado, tachado, etc.). Los valores que puede tomar son: none,
+          underline, overline, line-through y blink.
+          <code style="color: red">text-decoration: underline;</code>
+        </li>
+        <li>
+          <strong>text-shadow</strong>: Establece la sombra del texto. Los
+          valores que puede tomar son: [desplazamiento-x] [desplazamiento-y]
+          [difuminado] [color].
+          <code style="color: red"
+            >text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);</code
+          >
+        </li>
+      </ul>
+
+      <h3><em>Propiedades para elementos</em></h3>
+      <ul>
+        <li>
+          <strong>width</strong>: Establece el ancho de un elemento.
+          <code style="color: red">width: 100px;</code>
+        </li>
+        <li>
+          <strong>height</strong>: Establece la altura de un elemento.
+          <code style="color: red">height: 50px;</code>
+        </li>
+        <li>
+          <strong>border</strong>: Establece el borde de un elemento. Los
+          valores que puede tomar son: [grosor] [estilo] [color].
+          <code style="color: red">border: 1px solid #000;</code>
+        </li>
+        <li>
+          <strong>border-radius</strong>: Establece el radio de las esquinas de
+          un elemento.
+          <code style="color: red">border-radius: 5px;</code>
+        </li>
+        <li>
+          <strong>background-color</strong>: Establece el color de fondo de un
+          elemento.
+          <code style="color: red">background-color: #f0f0f0;</code>
+        </li>
+        <li>
+          <strong>text-align</strong>: Establece la alineación del texto. Los
+          valores que puede tomar son: left, right, center y justify.
+          <code style="color: red">text-align: center;</code>
+        </li>
+        <li>
+          <strong>vertical-align</strong>: Establece la alineación vertical de
+          un elemento en línea o una celda de tabla. Los valores que puede tomar
+          son: baseline, top, middle, bottom, text-top, text-bottom, sub y
+          super.
+          <code style="color: red">vertical-align: middle;</code>
+        </li>
+        <li>
+          <strong>box-shadow</strong>: Establece la sombra de un elemento. Los
+          valores que puede tomar son: [desplazamiento-x] [desplazamiento-y]
+          [difuminado] [color].
+          <code style="color: red"
+            >box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);</code
+          >
+        </li>
+        <li>
+          <strong>display</strong>: Establece el tipo de visualización de un
+          elemento. Los valores más comunes son: block, inline, inline-block,
+          none y flex.
+          <code style="color: red">display: none;</code>
+        </li>
+      </ul>
+
+      <h3><em>Propiedades para imagenes</em></h3>
+      <ul>
+        <li>
+          <strong>float</strong>: Coloca la imagen flotando dentro del texto.
+          Los valores que puede tomar son: left, right y none.
+          <code style="color: red">float: left;</code>
+        </li>
+        <li>
+          <strong>clear</strong>: Se coloca en el elemento de texto que no
+          queremos que este flotando con la imagen. Los valores que puede tomar
+          son: left, right, both y none.
+          <code style="color: red">clear: both;</code>
+        </li>
+        <li>
+          <strong>object-fit</strong>: Define cómo se ajusta una imagen dentro
+          de su contenedor. Los valores más comunes son: "fill" para que la
+          imagen llene todo el espacio disponible, "contain" para que la imagen
+          se ajuste dentro del contenedor sin recortarse, "cover" para que la
+          imagen cubra todo el contenedor, "none" para que la imagen no se
+          ajuste y "scale-down" para que la imagen se reduzca si es más grande
+          que el contenedor.
+          <code style="color: red">object-fit: cover;</code>
+        </li>
+        <li>
+          <strong>object-position</strong>: Define la posición de una imagen
+          dentro de su contenedor cuando se utiliza object-fit. Los valores más
+          comunes son: center, top, bottom, left, right y combinaciones como top
+          left, bottom right, etc.
+          <code style="color: red">object-position: center;</code>
+        </li>
+      </ul>
+
+      <h3><em>Propiedades para fondos de pantalla</em></h3>
+      <ul>
+        <li>
+          <strong>background-image</strong>: Establece una imagen de fondo para
+          un elemento.
+          <code style="color: red"
+            >background-image: url('ruta/de/la/imagen.jpg');</code
+          >
+        </li>
+        <li>
+          <strong>background-size</strong>: Controla el tamaño de la imagen de
+          fondo. Los valores más comunes son: cover, contain y auto.
+          <code style="color: red">background-size: cover;</code>
+        </li>
+        <li>
+          <strong>background-position</strong>: Define la posición de la imagen
+          de fondo dentro del elemento. Los valores más comunes son: center,
+          top, bottom, left, right y combinaciones como top left, bottom right,
+          etc.
+          <code style="color: red">background-position: center;</code>
+        </li>
+        <li>
+          <strong>background-repeat</strong>: Controla si la imagen de fondo se
+          repite o no. Los valores más comunes son: repeat, no-repeat, repeat-x,
+          repeat-y, space y round.
+          <code style="color: red">background-repeat: no-repeat;</code>
+        </li>
+        <li>
+          <strong>background-attachment</strong>: Controla si la imagen de fondo
+          se desplaza con el contenido o se fija en su lugar. Los valores más
+          comunes son: scroll, fixed y local.
+          <code style="color: red">background-attachment: fixed;</code>
+        </li>
+      </ul>
+
+      <h3><em>Propiedades para listas</em></h3>
+      <ul>
+        <li>
+          <strong>list-style-type</strong>: Define el tipo de marcador para los
+          elementos de una lista. Los valores más comunes son: disc, circle,
+          square, decimal, lower-alpha, upper-alpha, lower-roman, upper-roman y
+          none. El valor por defecto es disc.
+          <code style="color: red">list-style-type: square;</code>
+        </li>
+        <li>
+          <strong>list-style-position</strong>: Define la posición del marcador
+          en relación con el contenido del elemento de la lista. Los valores
+          son: inside (dentro del contenido) y outside (fuera del contenido). El
+          valor outside es el valor por defecto.
+          <code style="color: red">list-style-position: inside;</code>
+        </li>
+        <li>
+          <strong>list-style-image</strong>: Permite utilizar una imagen como
+          marcador para los elementos de una lista. Se especifica la URL de la
+          imagen.
+          <code style="color: red"
+            >list-style-image: url('ruta/de/la/imagen.png');</code
+          >
+        </li>
+      </ul>
+
+      <!-- Transformaciones, Transiciones y Animaciones-->
+      <h2>Transformaciones, Transiciones y Animaciones</h2>
+      <hr />
+
+      <h3>Transformaciones en 2D</h3>
+      <p>
+        Las transformaciones en 2D permiten modificar la forma de los elementos
+        en el espacio 2D. Las transformaciones más comunes son:
+      </p>
+      <ul>
+        <li>
+          <strong>translate(x, y):</strong> Mueve un elemento en el eje X e Y.
+          Los argumentos x e y representan la distancia a mover en píxeles.
+          <code style="color: red">transform: translate(50px, 100px);</code>
+        </li>
+        <li>
+          <strong>scale(sx, sy):</strong> Escala un elemento en el eje X e Y.
+          Los argumentos tienen por defecto el valor 1, por lo que si colocamos
+          el valor 1.2, va a aumentar el objeto en un 20%.
+          <code style="color: red">transform: scale(1.5, 2);</code>
+        </li>
+        <li>
+          <strong>rotate(angle):</strong> Rota un elemento alrededor de su
+          centro en un ángulo especificado. El argumento angle se mide en
+          grados.
+          <code style="color: red">transform: rotate(45deg);</code>
+        </li>
+        <li>
+          <strong>skew(ax, ay):</strong> Inclina un elemento en el eje X e Y.
+          <code style="color: red">transform: skew(20deg, 10deg);</code>
+        </li>
+      </ul>
+
+      <p>
+        La propiedad transform-origin permite cambiar el punto de origen de las
+        transformaciones. Por defecto, este punto es el centro del elemento.
+        <code style="color: red">transform-origin: top left;</code>
+      </p>
+
+      <h3><em>Transformaciones en 3D</em></h3>
+      <p>
+        Las transformaciones en 3D se usan en conjunto con las transformaciones
+        en 2D, para usar las transformaciones vamos a tener contenedores que van
+        a tener profundidad. Estas son:
+      </p>
+
+      <ul>
+        <li>
+          <strong>translate3d(x, y, z):</strong> Mueve un elemento en los ejes
+          X, Y y Z.
+          <code style="color: red"
+            >transform: translate3d(50px, 100px, 30px);</code
+          >
+        </li>
+        <li>
+          <strong>scale3d(sx, sy, sz):</strong> Escala un elemento en los ejes
+          X, Y y Z.
+          <code style="color: red">transform: scale3d(1.5, 2, 1);</code>
+        </li>
+        <li>
+          <strong>rotate3d(x, y, z, angle):</strong> Rota un elemento alrededor
+          de un eje definido por los vectores x, y y z en un ángulo
+          especificado.
+          <code style="color: red">transform: rotate3d(1, 0, 0, 45deg);</code>
+        </li>
+        <li>
+          <strong>perspective(n):</strong> Define la perspectiva para las
+          transformaciones en 3D. El valor n representa la distancia desde el
+          punto de vista hasta el plano de proyección.
+          <code style="color: red">perspective: 500px;</code>
+        </li>
+      </ul>
+
+      <p>
+        <strong>Nota:</strong> Las transformaciones en 3D requieren un contexto
+        de apilamiento de capas. Asegúrate de que el elemento padre tenga una
+        propiedad <code>perspective</code> establecida para obtener el efecto 3D
+        deseado.
+      </p>
+
+      <h3><em>Transiciones</em></h3>
+
+      <p>
+        Con las transiciones podemos tener las transformaciones que ya vimos,
+        pero en lugar de que el cambio sea instantaneo ahora se va a tomar un
+        tiempo el elemento. Esta se usa con un contenedor y un item dentro de
+        este contenedor, cuando el item cambia de estado (por ejemplo, al hacer
+        hover), la transición se activa:
+      </p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        .contenedor:hover .item &#123;<br />
+        &nbsp;&nbsp; transform: rotateX(20deg);<br />
+        &#125;
+      </div>
+
+      <p>
+        Primero decimos que cuando estemos sobre el contenedor, el item va a
+        rotar 20 grados.
+      </p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        .item &#123;<br />
+        &nbsp;&nbsp; transition: 1.5s ease-in-out 0s;<br />
+        &#125;
+      </div>
+
+      <p>
+        Después le decimos al item que se demore 1.5 segundos en realizar esa
+        transformacion.
+      </p>
+      <p>Los argumentos de transition son los siguientes:</p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        .item &#123;<br />
+        &nbsp;&nbsp; transition: [transition-duration]
+        [transition-timing-function] [transition-delay];<br />
+        &#125;
+      </div>
+
+      <ul>
+        <li>
+          <strong>transition-duration:</strong> Define la duración de la
+          transición.
+        </li>
+        <li>
+          <strong>transition-timing-function:</strong> Controla la velocidad de
+          la transición a lo largo del tiempo (ease, linear, ease-in, ease-out,
+          etc.).
+        </li>
+        <li>
+          <strong>transition-delay:</strong> Establece un retraso antes de que
+          comience la transición.
+        </li>
+      </ul>
+
+      <h3><em>Animaciones</em></h3>
+      <p>
+        Podemos hacer transiciones que no dependan de una accion por parte del
+        usuario, sino que ocurran por un tiempo determinado, a estas se le
+        llaman animaciones.
+      </p>
+
+      <p>
+        Para aplicar la animación a un elemento, se utiliza la propiedad
+        <code>animation</code>, que puede desglosarse en las siguientes
+        subpropiedades:
+      </p>
+      <p>
+        <code
+          >animation: [name] [duration] [timing-function] [delay]
+          [iteration-count] [direction] [fill] [mode] [play-state]
+        </code>
+      </p>
+      <p>
+        <strong>Nota: </strong> solo las propiedades name y duration son
+        obligatorias, las otras son opcionales.
+      </p>
+      <ul>
+        <li>
+          <strong>name:</strong> Especifica el nombre de la animación definida
+          con @keyframes.
+        </li>
+        <li><strong>duration:</strong> Define la duración de la animación.</li>
+        <li>
+          <strong>timing-function:</strong> Controla la velocidad de la
+          animación a lo largo del tiempo (ease, linear, ease-in, ease-out,
+          etc.).
+        </li>
+        <li>
+          <strong>delay:</strong> Establece un retraso antes de que comience la
+          animación.
+        </li>
+        <li>
+          <strong>iteration-count:</strong> Define cuántas veces se repetirá la
+          animación (un número específico o infinite para repetir
+          indefinidamente).
+        </li>
+        <li>
+          <strong>direction:</strong> Controla la dirección de la animación
+          (normal, reverse, alternate, alternate-reverse).
+        </li>
+        <li>
+          <strong>fill: </strong> Controla el comportamiento de la animación
+          cuando no está en ejecución (forwards, backwards, both, none).
+        </li>
+        <li>
+          <strong>play-state:</strong> Controla si la animación está en
+          ejecución o pausada (running, paused).
+        </li>
+      </ul>
+
+      <p>
+        Por otro lado, tenemos los keyframes, estas son las intrucciones de que
+        va a pasar durante la duracion. Por ejemplo, hagamos que un ojo parpadee
+      </p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        .ojo &#123;<br />
+        &nbsp;&nbsp; animation: parpadeo 3s infinite;<br />
+        &#125; <br /><br />
+
+        @keyframes parpadeo &#123;<br />
+        &nbsp;&nbsp; 0% &#123; transform: scale(1, 1); &#125;<br />
+        &nbsp;&nbsp; 50% &#123; transform: scale(1, 0.2); &#125;<br />
+        &nbsp;&nbsp; 100% &#123; transform: scale(1, 1); &#125;<br />
+        &#125;
+      </div>
+
+      <p>
+        En este ejemplo, al objeto con clase “ojo” le decimos que “parpadee”, y
+        en el keyframe especificamos que es parpadear, siendo esto igual a que
+        en el momento inicial se vea el ojo normal, en momento del medio la
+        parte Y se reduzca hasta un 20% de su valor, y al final vuelva a verse
+        el ojo normal
+      </p>
+
+      <!-- Modelo de Caja -->
+      <h2>Modelo de Caja</h2>
+      <hr />
+
+      <p>
+        El modelo de caja se compone de cuatro elementos: margin, border,
+        padding y contenido
+      </p>
+      <p>
+        Si entras a las herramientas de desarrollador de tu navegador y señalas
+        un elemento HTML, en la sección de estilos te aparecerá una vista, este
+        es el modelo de caja del elemento señalado. De adentro hacia afuera, los
+        elementos son:
+      </p>
+      <ul>
+        <li>
+          <strong>Content (Contenido):</strong> Es el área donde se muestra el
+          contenido del elemento, como texto o imágenes.
+          <div class="code-box">
+            <div class="code-header">CSS</div>
+            div &#123;<br />
+            &nbsp;&nbsp; width: 200px;<br />
+            &nbsp;&nbsp; height: 100px; <br />
+            &#125;
+          </div>
+        </li>
+        <li>
+          <strong>Padding (Relleno):</strong> Es el espacio entre el contenido y
+          el borde del elemento. Aumentar el padding incrementa el espacio
+          alrededor del contenido.
+          <div class="code-box">
+            <div class="code-header">CSS</div>
+            div &#123;<br />
+            &nbsp;&nbsp; padding: [arriba] [derecha] [abajo] [izquierda];<br />
+            &#125;
+          </div>
+        </li>
+        <li>
+          <strong>Border (Borde):</strong> Es la línea que rodea el padding y el
+          contenido. Puedes personalizar su grosor, estilo y color.
+          <div class="code-box">
+            <div class="code-header">CSS</div>
+            div &#123;<br />
+            &nbsp;&nbsp; border: [grosor] [estilo] [color];<br />
+            &#125;
+          </div>
+        </li>
+        <li>
+          <strong>Margin (Margen):</strong> Es el espacio fuera del borde del
+          elemento. Aumentar el margen separa el elemento de otros elementos en
+          la página.
+          <div class="code-box">
+            <div class="code-header">CSS</div>
+            div &#123;<br />
+            &nbsp;&nbsp; margin: [arriba] [derecha] [abajo] [izquierda];<br />
+            &#125;
+          </div>
+        </li>
+      </ul>
+
+      <h3><em>Valores iniciales por defecto</em></h3>
+      <p>Los valores iniciales por defecto del modelo de caja en CSS son:</p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        * &#123;<br />
+        &nbsp;&nbsp; margin: 0;<br />
+        &nbsp;&nbsp; padding: 0;<br />
+        &nbsp;&nbsp; box-sizing: border-box;<br />
+        &#125;
+      </div>
+
+      <h3><em>Propiedad box-sizing</em></h3>
+      <p>
+        La propiedad <code>box-sizing</code> establece cómo se calculará el
+        width y el height sí incluyen bordes y espacios internos. Como buena
+        práctica, se lo coloca en el selector universal, para que todos los
+        elementos sigan esta tendencia. Los valores más comunes son:
+      </p>
+      <ul>
+        <li>
+          <strong>content-box:</strong> El ancho y alto incluyen solo el
+          contenido, sin padding ni border.
+        </li>
+        <li>
+          <strong>border-box:</strong> El ancho y alto incluyen el padding y el
+          border, lo que facilita el diseño.
+        </li>
+      </ul>
+
+      <h3><em>Overflow</em></h3>
+      <p>
+        La propiedad <code>overflow</code> controla cómo se maneja el contenido
+        que desborda el área asignada a un elemento. Los valores más comunes
+        son:
+      </p>
+      <ul>
+        <li>
+          <strong>visible:</strong> El contenido desbordado es visible fuera del
+          área del elemento (valor por defecto).
+        </li>
+        <li>
+          <strong>hidden:</strong> El contenido desbordado se oculta y no es
+          visible.
+        </li>
+        <li>
+          <strong>scroll:</strong> Se agregan barras de desplazamiento para
+          permitir al usuario desplazarse y ver el contenido desbordado.
+        </li>
+        <li>
+          <strong>auto:</strong> Se agregan barras de desplazamiento solo si es
+          necesario.
+        </li>
+        <li>
+          <strong>overflow-y:</strong> Controla el desbordamiento en el eje
+          vertical.
+        </li>
+        <li>
+          <strong>overflow-x:</strong> Controla el desbordamiento en el eje
+          horizontal.
+        </li>
+      </ul>
+
+      <h3><em>Posicionamiento en CSS</em></h3>
+      <p>
+        El posicionamiento en CSS consiste en cómo un elemento se situará, con
+        respecto a su elemento padre y al flujo normal del documento. El flujo
+        normal del documento es el orden de los elementos establecidos en el
+        HTML. Las posiciones conocidas son:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Static (Estático):</strong> Es la posición por defecto de los
+          elementos. Los elementos se colocan en el flujo normal del documento,
+          uno después del otro.
+        </li>
+        <li>
+          <strong>Relative (Relativo):</strong> El elemento se posiciona
+          relativamente a su posición original en el flujo del documento. Puedes
+          usar las propiedades top, right, bottom y left para moverlo desde su
+          posición original.
+        </li>
+        <li>
+          <strong>Absolute (Absoluto):</strong> El elemento se posiciona
+          absolutamente con respecto a su contenedor posicionado más cercano (un
+          elemento padre con posición relativa, absoluta o fija). Si no hay un
+          contenedor posicionado, se posiciona con respecto al viewport.
+        </li>
+        <li>
+          <strong>Fixed (Fijo):</strong> El elemento se posiciona con respecto
+          al viewport y permanece en la misma posición incluso cuando se hace
+          scroll en la página.
+        </li>
+        <li>
+          <strong>Sticky (Pegajoso):</strong> El elemento se comporta como
+          relativo hasta que alcanza un umbral definido por las propiedades top,
+          right, bottom o left, momento en el cual se comporta como fijo.
+        </li>
+      </ul>
+
+      <h3><em>Apilamiento</em></h3>
+      <p>
+        El apilamiento en CSS se refiere al orden en el que se muestran los
+        elementos en la pantalla, especialmente cuando se superponen. Este orden
+        se determina por la propiedad <code>z-index</code>, que establece la
+        posición de un elemento en el eje Z (profundidad). Los elementos con un
+        <code>z-index</code> más alto se muestran frente a los elementos con un
+        <code>z-index</code> más bajo. Por defecto, todos los elementos tienen
+        un <code>z-index</code> de 0.
+      </p>
+      <p>
+        <strong>Nota: </strong> si un elemento que tiene un z-index menor a
+        otros, sus hijos nunca estarán por encima, aunque su z-index sea mayor
+      </p>
+
+      <!-- Medidas -->
+      <h2>Medidas</h2>
+      <hr />
+      <p>
+        En CSS, las unidades de medida se utilizan para definir tamaños,
+        distancias y otros valores relacionados con el diseño y la presentación
+        de los elementos en una página web. Las unidades de medida más comunes
+        en CSS son:
+      </p>
+      <ul>
+        <li>
+          <strong>Pixeles (px):</strong> Unidad absoluta que representa un punto
+          en la pantalla. Es fija y no cambia con el tamaño de la pantalla o la
+          resolución.
+        </li>
+        <li>
+          <strong>Porcentajes (%):</strong> Unidad relativa que representa un
+          porcentaje del tamaño del elemento contenedor. Es útil para diseños
+          fluidos y adaptativos.
+        </li>
+        <li>
+          <strong>Em (em):</strong> Unidad relativa que se basa en el tamaño de
+          fuente del elemento padre. 1em es igual al tamaño de fuente del
+          elemento padre.
+        </li>
+        <li>
+          <strong>Rem (rem):</strong> Unidad relativa que se basa en el tamaño
+          de fuente del elemento raíz (generalmente el elemento
+          <code>html</code>). 1rem es igual al tamaño de fuente del elemento
+          raíz.
+        </li>
+        <li>
+          <strong>Viewport Width (vw):</strong> Unidad relativa que representa
+          un porcentaje del ancho del viewport (área visible de la página web).
+          1vw es igual al 1% del ancho del viewport.
+        </li>
+        <li>
+          <strong>Viewport Height (vh):</strong> Unidad relativa que representa
+          un porcentaje de la altura del viewport. 1vh es igual al 1% de la
+          altura del viewport.
+        </li>
+      </ul>
+
+      <h3><em>Configurar medida rem a 10px</em></h3>
+      <p>
+        Para configurar la medida rem a 10px, se debe establecer el tamaño de
+        fuente del elemento raíz (<code>html</code>) a 62.5%. Esto se debe a que
+        el tamaño de fuente por defecto en la mayoría de los navegadores es
+        16px, y al establecerlo en 62.5%, 1rem equivaldrá a 10px (16px * 0.625 =
+        10px).
+      </p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        html &#123;<br />
+        &nbsp;&nbsp; font-size: 62.5%;<br />
+        &#125;
+      </div>
+
+      <!-- Responsive Design -->
+      <h2>Responsive Design</h2>
+      <hr />
+      <p>
+        El diseño responsivo (Responsive Design) es una técnica de diseño web
+        que permite que una página web se adapte y se vea bien en diferentes
+        dispositivos y tamaños de pantalla, como computadoras de escritorio,
+        tabletas y teléfonos móviles. Esto se logra utilizando CSS y HTML de
+        manera flexible y adaptable.
+      </p>
+      <h3><em>Media Queries</em></h3>
+      <p>
+        Las Media Queries son una característica de CSS que permite aplicar
+        estilos específicos según las características del dispositivo o la
+        ventana del navegador, como el ancho, la altura, la resolución y la
+        orientación. Esto es fundamental para crear diseños responsivos que se
+        adapten a diferentes tamaños de pantalla.
+      </p>
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        @media (max-width: 768px) &#123;<br />
+        &nbsp;&nbsp; /* Estilos para pantallas con un ancho máximo de 768px
+        */<br />
+        &#125;
+      </div>
     </div>
   </body>
 </html>
