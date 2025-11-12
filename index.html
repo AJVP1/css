@@ -714,6 +714,604 @@
         el ojo normal
       </p>
 
+      <!-- tipos de display -->
+      <h2>Tipos de display</h2>
+      <hr />
+      <p>
+        Los tipos de display en CSS controlan cómo se muestra un elemento en la
+        página. Los más comunes son:
+      </p>
+      <ul>
+        <li>
+          <strong>block:</strong> El elemento ocupa todo el ancho disponible y
+          comienza en una nueva línea.
+        </li>
+        <li>
+          <strong>inline:</strong> El elemento solo ocupa el espacio necesario y
+          no comienza en una nueva línea. No es posible establecer un ancho o
+          alto.
+        </li>
+        <li>
+          <strong>inline-block:</strong> Combina características de los
+          elementos block e inline. Permite establecer un ancho y alto.
+        </li>
+        <li>
+          <strong>none:</strong> El elemento no se muestra en la página y no
+          ocupa espacio.
+        </li>
+        <li>
+          <strong>flex:</strong> Permite un diseño flexible y adaptable en un
+          solo eje.
+        </li>
+        <li><strong>grid:</strong> Permite un diseño basado en cuadrículas.</li>
+      </ul>
+
+      <h3><em>display flex</em></h3>
+      <p>
+        El display flex es un modelo de diseño en CSS que permite distribuir y
+        alinear elementos dentro de un contenedor de manera flexible y
+        eficiente. Al aplicar <code>display: flex;</code> a un contenedor, los
+        elementos hijos se convierten en elementos flexibles que pueden
+        ajustarse automáticamente al espacio disponible.
+      </p>
+      <p>Propiedades para el contenedor:</p>
+      <ul>
+        <li>
+          <strong>flex-direction:</strong> Define la dirección de los elementos
+          dentro del contenedor flex (row, column, row-reverse, column-reverse).
+          Por defecto es row.
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex row</div>
+            <div style="display: flex; flex-direction: row; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex row-reverse</div>
+            <div style="display: flex; flex-direction: row-reverse; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex column</div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex column-reverse</div>
+            <div
+              style="display: flex; flex-direction: column-reverse; gap: 10px"
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <strong>justify-content:</strong> Alinea los elementos a lo largo del
+          eje principal (flex-start, flex-end, center, space-between,
+          space-around, space-evenly). Por defecto es flex-start.
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex flex-start</div>
+            <div style="display: flex; justify-content: flex-start; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex flex-end</div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex center</div>
+            <div style="display: flex; justify-content: center; gap: 10px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex space-between</div>
+            <div
+              style="display: flex; justify-content: space-between; gap: 10px"
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex space-around</div>
+            <div
+              style="display: flex; justify-content: space-around; gap: 10px"
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex space-evenly</div>
+            <div
+              style="display: flex; justify-content: space-evenly; gap: 10px"
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <strong>align-items:</strong> Alinea los elementos a lo largo del eje
+          transversal (flex-start, flex-end, center, baseline, stretch). Por
+          defecto es stretch.
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex flex-start</div>
+            <div
+              style="
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                height: 150px;
+              "
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex flex-end</div>
+            <div
+              style="
+                display: flex;
+                align-items: flex-end;
+                gap: 10px;
+                height: 150px;
+              "
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex center</div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: 150px;
+              "
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex baseline</div>
+            <div
+              style="
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+                height: 150px;
+              "
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex stretch</div>
+            <div
+              style="
+                display: flex;
+                align-items: stretch;
+                gap: 10px;
+                height: 150px;
+              "
+            >
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <strong>flex-wrap:</strong> Controla si los elementos flexibles se
+          envuelven o no (nowrap, wrap, wrap-reverse). Por defecto es nowrap.
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex nowrap</div>
+            <div
+              style="
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 10px;
+                width: 300px;
+                border: 1px solid black;
+              "
+            >
+              <div
+                style="
+                  background-color: lightcoral;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 1
+              </div>
+              <div
+                style="background-color: lightblue; padding: 10px; width: 150px"
+              >
+                Item 2
+              </div>
+              <div
+                style="
+                  background-color: lightgreen;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex wrap</div>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 300px;
+                border: 1px solid black;
+              "
+            >
+              <div
+                style="
+                  background-color: lightcoral;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 1
+              </div>
+              <div
+                style="background-color: lightblue; padding: 10px; width: 150px"
+              >
+                Item 2
+              </div>
+              <div
+                style="
+                  background-color: lightgreen;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 3
+              </div>
+            </div>
+          </div>
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex wrap-reverse</div>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap-reverse;
+                gap: 10px;
+                width: 300px;
+                border: 1px solid black;
+              "
+            >
+              <div
+                style="
+                  background-color: lightcoral;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 1
+              </div>
+              <div
+                style="background-color: lightblue; padding: 10px; width: 150px"
+              >
+                Item 2
+              </div>
+              <div
+                style="
+                  background-color: lightgreen;
+                  padding: 10px;
+                  width: 150px;
+                "
+              >
+                Item 3
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <strong>gap:</strong> Controla el espacio entre los elementos
+          flexibles. Puedes usar valores como <code>10px</code> o
+          <code>1rem</code>. Por defecto es <code>0</code>.
+
+          <div class="resultado-box">
+            <div class="resultado-header">CSS Flex gap</div>
+            <div style="display: flex; gap: 20px">
+              <div style="background-color: lightcoral; padding: 10px">
+                Item 1
+              </div>
+              <div style="background-color: lightblue; padding: 10px">
+                Item 2
+              </div>
+              <div style="background-color: lightgreen; padding: 10px">
+                Item 3
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <p>Propiedades para los items:</p>
+
+      <ul>
+        <li>
+          <strong>order:</strong> Define el orden de los elementos flexibles
+          dentro del contenedor. El valor por defecto es 0. Los elementos con
+          valores más bajos se muestran primero.
+          <code style="color: red">order: 1;</code>
+        </li>
+        <li>
+          <strong>flex-grow:</strong> Controla cómo un elemento flexible puede
+          crecer para ocupar el espacio disponible en el contenedor. El valor
+          por defecto es 0 (no crece). Un valor mayor indica que el elemento
+          puede crecer más en comparación con otros elementos.
+          <code style="color: red">flex-grow: 2;</code>
+        </li>
+        <li>
+          <strong>flex-shrink:</strong> Controla cómo un elemento flexible puede
+          encogerse cuando no hay suficiente espacio en el contenedor. El valor
+          por defecto es 1 (puede encogerse). Un valor mayor indica que el
+          elemento puede encogerse más en comparación con otros elementos.
+          <code style="color: red">flex-shrink: 0;</code>
+        </li>
+        <li>
+          <strong>flex-basis:</strong> Define el tamaño inicial de un elemento
+          flexible antes de que se aplique el crecimiento o encogimiento. Puede
+          ser un valor fijo (como 100px) o un porcentaje del contenedor.
+          <code style="color: red">flex-basis: 150px;</code>
+        </li>
+      </ul>
+
+      <h3><em>Display Grid</em></h3>
+
+      <p>
+        El display grid es un modelo de diseño en CSS que permite crear diseños
+        bidimensionales mediante la definición de filas y columnas en un
+        contenedor. Al aplicar <code>display: grid;</code> a un contenedor, los
+        elementos hijos se organizan automáticamente en una cuadrícula según las
+        reglas definidas.
+      </p>
+
+      <p>Propiedades para el contenedor:</p>
+
+      <ul>
+        <li>
+          <strong>grid-template-columns:</strong> Define el número y tamaño de
+          las columnas en la cuadrícula.
+          <code style="color: red"
+            >grid-template-columns: 100px 200px 1fr;</code
+          >
+        </li>
+        <li>
+          <strong>grid-auto-rows:</strong> Define el tamaño de las filas en la
+          cuadrícula. Este es usado cuando se agregan más filas de las definidas
+          en grid-template-rows.
+          <code style="color: red">grid-auto-rows: 100px;</code>
+        </li>
+        <li>
+          <strong>grid-template-rows:</strong> Define el número y tamaño de las
+          filas en la cuadrícula.
+          <code style="color: red">grid-template-rows: 100px 200px;</code>
+        </li>
+        <li>
+          <strong>grid-auto-columns:</strong> Define el tamaño de las columnas
+          en la cuadrícula. Este es usado cuando se agregan más columnas de las
+          definidas en grid-template-columns.
+          <code style="color: red">grid-auto-columns: 100px;</code>
+        </li>
+        <li>
+          <strong>grid-gap:</strong> Controla el espacio entre filas y columnas
+          en la cuadrícula. El valor por defecto es 0. Se pueden colocar dos
+          valores, el primero para filas y el segundo para columnas.
+          <code style="color: red">grid-gap: 10px 20px;</code>
+        </li>
+        <li>
+          <strong>justify-items:</strong> Alinea los elementos dentro de sus
+          celdas en el eje horizontal. Los valores comunes son start, end,
+          center y stretch. El valor por defecto es stretch.
+          <code style="color: red">justify-items: center;</code>
+        </li>
+        <li>
+          <strong>align-items:</strong> Alinea los elementos dentro de sus
+          celdas en el eje vertical. Los valores comunes son start, end, center
+          y stretch. El valor por defecto es stretch.
+          <code style="color: red">align-items: center;</code>
+        </li>
+        <li>
+          <strong>grid-auto-flow:</strong> Controla cómo se colocan los
+          elementos en la cuadrícula cuando no hay espacio definido. Los valores
+          comunes son row, column y dense. El valor por defecto es row.
+          <code style="color: red">grid-auto-flow: row;</code>
+        </li>
+        <li>
+          <strong>grid-template-areas:</strong> Define áreas de cuadrícula con
+          nombres para facilitar la colocación de elementos. Los nombres de área
+          se asignan a los elementos hijos.
+          <code style="color: red"
+            >grid-template-areas: "header header" "sidebar content";</code
+          >
+          Para dejar un area en blanco usamos un punto (.), por ejemplo
+          <code>grid-template-areas: "header header" "sidebar .";</code>
+        </li>
+      </ul>
+
+      <p>Propiedades para los items:</p>
+      <ul>
+        <li>
+          <strong>grid-column:</strong> Define la posición y el tamaño de un
+          elemento en las columnas de la cuadrícula.
+          <code style="color: red">grid-column: 1 / 3;</code>
+        </li>
+        <li>
+          <strong>grid-row:</strong> Define la posición y el tamaño de un
+          elemento en las filas de la cuadrícula.
+          <code style="color: red">grid-row: 2 / 4;</code>
+        </li>
+        <li>
+          <strong>justify-self:</strong> Alinea un elemento dentro de su celda
+          en el eje horizontal. Los valores comunes son start, end, center y
+          stretch. El valor por defecto es stretch.
+          <code style="color: red">justify-self: center;</code>
+        </li>
+        <li>
+          <strong>align-self:</strong> Alinea un elemento dentro de su celda en
+          el eje vertical. Los valores comunes son start, end, center y stretch.
+          El valor por defecto es stretch.
+          <code style="color: red">align-self: center;</code>
+        </li>
+        <li>
+          <strong>grid-area:</strong> Asigna un elemento a un área de cuadrícula
+          definida en grid-template-areas.
+          <code style="color: red">grid-area: header;</code>
+        </li>
+      </ul>
+
       <!-- Modelo de Caja -->
       <h2>Modelo de Caja</h2>
       <hr />
