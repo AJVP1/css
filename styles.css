@@ -64,6 +64,126 @@ img {
   margin: 20px auto;
 }
 
+.red {
+  color: red;
+}
+
+/* Demo item colors for Flexbox demonstrations */
+.demo-item-coral {
+  background-color: lightcoral;
+  padding: 10px;
+}
+
+.demo-item-blue {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.demo-item-green {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.demo-item-fixed {
+  width: 150px;
+}
+
+/* Flex demo containers - base */
+.flex-demo {
+  display: flex;
+  gap: 10px;
+}
+
+/* Flex direction modifiers */
+.flex-demo-row {
+  flex-direction: row;
+}
+
+.flex-demo-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-demo-column {
+  flex-direction: column;
+}
+
+.flex-demo-column-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Justify content modifiers */
+.flex-demo-justify-start {
+  justify-content: flex-start;
+}
+
+.flex-demo-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-demo-justify-center {
+  justify-content: center;
+}
+
+.flex-demo-justify-between {
+  justify-content: space-between;
+}
+
+.flex-demo-justify-around {
+  justify-content: space-around;
+}
+
+.flex-demo-justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align items modifiers */
+.flex-demo-align-start {
+  align-items: flex-start;
+}
+
+.flex-demo-align-end {
+  align-items: flex-end;
+}
+
+.flex-demo-align-center {
+  align-items: center;
+}
+
+.flex-demo-align-baseline {
+  align-items: baseline;
+}
+
+.flex-demo-align-stretch {
+  align-items: stretch;
+}
+
+.flex-demo-height {
+  height: 150px;
+}
+
+/* Flex wrap modifiers */
+.flex-demo-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-demo-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-demo-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Special flex demo utilities */
+.flex-demo-bordered {
+  width: 300px;
+  border: 1px solid black;
+}
+
+.flex-demo-gap-20 {
+  gap: 20px;
+}
+
 .code-box {
   background: #1e1e1e;
   border-radius: 8px;
