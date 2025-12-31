@@ -25,7 +25,9 @@
             <li><a href="#que-es-css">¿Qué es CSS?</a></li>
             <li><a href="#maquetacion">Maquetación</a></li>
             <li><a href="#selectores-basicos">Selectores básicos</a></li>
-            <li><a href="#selectores-combinadores">Selectores combinadores</a></li>
+            <li>
+              <a href="#selectores-combinadores">Selectores combinadores</a>
+            </li>
             <li><a href="#especificidad">Especificidad</a></li>
             <li><a href="#pseudoclases">Pseudoclases</a></li>
             <li><a href="#pseudoelementos">Pseudoelementos</a></li>
@@ -38,14 +40,24 @@
           <a href="#propiedades">Propiedades con más uso</a>
           <ul>
             <li><a href="#propiedades-texto">Propiedades de texto</a></li>
-            <li><a href="#propiedades-elementos">Propiedades para elementos</a></li>
-            <li><a href="#propiedades-imagenes">Propiedades para imágenes</a></li>
-            <li><a href="#propiedades-fondos">Propiedades para fondos de pantalla</a></li>
+            <li>
+              <a href="#propiedades-elementos">Propiedades para elementos</a>
+            </li>
+            <li>
+              <a href="#propiedades-imagenes">Propiedades para imágenes</a>
+            </li>
+            <li>
+              <a href="#propiedades-fondos"
+                >Propiedades para fondos de pantalla</a
+              >
+            </li>
             <li><a href="#propiedades-listas">Propiedades para listas</a></li>
           </ul>
         </li>
         <li>
-          <a href="#transformaciones">Transformaciones, Transiciones y Animaciones</a>
+          <a href="#transformaciones"
+            >Transformaciones, Transiciones y Animaciones</a
+          >
           <ul>
             <li><a href="#transformaciones-2d">Transformaciones en 2D</a></li>
             <li><a href="#transformaciones-3d">Transformaciones en 3D</a></li>
@@ -63,7 +75,9 @@
         <li>
           <a href="#modelo-caja">Modelo de Caja</a>
           <ul>
-            <li><a href="#valores-iniciales">Valores iniciales por defecto</a></li>
+            <li>
+              <a href="#valores-iniciales">Valores iniciales por defecto</a>
+            </li>
             <li><a href="#box-sizing">Propiedad box-sizing</a></li>
             <li><a href="#overflow">Overflow</a></li>
             <li><a href="#posicionamiento">Posicionamiento en CSS</a></li>
@@ -275,10 +289,8 @@
       <div class="code-box">
         <div class="code-header">CSS</div>
         :root &#123;<br />
-        &nbsp;&nbsp; <span class="red">--color-primario: #3498db;</span
-        ><br />
-        &nbsp;&nbsp; <span class="red">--margen-estandar: 16px;</span
-        ><br />
+        &nbsp;&nbsp; <span class="red">--color-primario: #3498db;</span><br />
+        &nbsp;&nbsp; <span class="red">--margen-estandar: 16px;</span><br />
         &#125;<br /><br />
         .boton &#123;<br />
         &nbsp;&nbsp; background-color:
@@ -389,9 +401,7 @@
           <strong>text-shadow</strong>: Establece la sombra del texto. Los
           valores que puede tomar son: [desplazamiento-x] [desplazamiento-y]
           [difuminado] [color].
-          <code class="red"
-            >text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);</code
-          >
+          <code class="red">text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);</code>
         </li>
       </ul>
 
@@ -436,9 +446,7 @@
           <strong>box-shadow</strong>: Establece la sombra de un elemento. Los
           valores que puede tomar son: [desplazamiento-x] [desplazamiento-y]
           [difuminado] [color].
-          <code class="red"
-            >box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);</code
-          >
+          <code class="red">box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);</code>
         </li>
         <li>
           <strong>display</strong>: Establece el tipo de visualización de un
@@ -480,7 +488,9 @@
         </li>
       </ul>
 
-      <h3 id="propiedades-fondos"><em>Propiedades para fondos de pantalla</em></h3>
+      <h3 id="propiedades-fondos">
+        <em>Propiedades para fondos de pantalla</em>
+      </h3>
       <ul>
         <li>
           <strong>background-image</strong>: Establece una imagen de fondo para
@@ -542,7 +552,9 @@
       </ul>
 
       <!-- Transformaciones, Transiciones y Animaciones-->
-      <h2 id="transformaciones">Transformaciones, Transiciones y Animaciones</h2>
+      <h2 id="transformaciones">
+        Transformaciones, Transiciones y Animaciones
+      </h2>
       <hr />
 
       <h3 id="transformaciones-2d">Transformaciones en 2D</h3>
@@ -591,9 +603,7 @@
         <li>
           <strong>translate3d(x, y, z):</strong> Mueve un elemento en los ejes
           X, Y y Z.
-          <code class="red"
-            >transform: translate3d(50px, 100px, 30px);</code
-          >
+          <code class="red">transform: translate3d(50px, 100px, 30px);</code>
         </li>
         <li>
           <strong>scale3d(sx, sy, sz):</strong> Escala un elemento en los ejes
@@ -654,7 +664,7 @@
         Después le decimos al item que se demore 1.5 segundos en realizar esa
         transformacion.
       </p>
-      <p>Los argumentos de transition son los siguientes:</p>
+      <p>Los argumentos de transición son los siguientes:</p>
 
       <div class="code-box">
         <div class="code-header">CSS</div>
@@ -679,6 +689,46 @@
           comience la transición.
         </li>
       </ul>
+
+      <p>En el siguiente ejemplo aplicamos la transición:</p>
+
+      <div class="code-box">
+        <div class="code-header">CSS</div>
+        .transition-demo-item &#123;<br />
+        &nbsp;&nbsp; background: linear-gradient(135deg, #667eea 0%, #764ba2
+        100%);<br />
+        &nbsp;&nbsp; border-radius: 10px;<br />
+        &nbsp;&nbsp; <span class="red">transition: 2s ease-in-out 0.5s;</span
+        ><br />
+        &#125;<br /><br />
+
+        .transition-demo-container:hover .transition-demo-item &#123;<br />
+        &nbsp;&nbsp; transform: rotate(360deg) scale(1.3);<br />
+        &nbsp;&nbsp; background: linear-gradient(135deg, #f093fb 0%, #f5576c
+        100%);<br />
+        &nbsp;&nbsp; border-radius: 50%;<br />
+        &#125;
+      </div>
+
+      <p>
+        En este ejemplo, el elemento tiene una transición de
+        <strong>2 segundos</strong> con timing function
+        <strong>ease-in-out</strong> y un delay de
+        <strong>0.5 segundos</strong>. Cuando pasas el mouse sobre el
+        contenedor, el elemento cambia múltiples propiedades (rotación, escala,
+        color de fondo y border-radius), pero gracias a la transición, todos
+        estos cambios ocurren de manera suave durante 2 segundos, iniciando
+        después de un retraso de 0.5 segundos.
+      </p>
+
+      <div class="resultado-box">
+        <div class="resultado-header">
+          Ejemplo interactivo - Pasa el mouse sobre la caja
+        </div>
+        <div class="transition-demo-container">
+          <div class="transition-demo-item">Hover me!</div>
+        </div>
+      </div>
 
       <h3 id="animaciones"><em>Animaciones</em></h3>
       <p>
@@ -755,11 +805,27 @@
       </div>
 
       <p>
-        En este ejemplo, al objeto con clase “ojo” le decimos que “parpadee”, y
+        En este ejemplo, al objeto con clase "ojo" le decimos que "parpadee", y
         en el keyframe especificamos que es parpadear, siendo esto igual a que
         en el momento inicial se vea el ojo normal, en momento del medio la
         parte Y se reduzca hasta un 20% de su valor, y al final vuelva a verse
         el ojo normal
+      </p>
+
+      <div class="resultado-box">
+        <div class="resultado-header">
+          Ejemplo interactivo - Animación de parpadeo
+        </div>
+        <div class="animation-demo-container">
+          <div class="ojo">👁️</div>
+        </div>
+      </div>
+
+      <p>
+        <strong>Nota:</strong> A diferencia de las transiciones, las animaciones
+        se ejecutan automáticamente sin necesidad de una acción del usuario. En
+        este caso, el ojo parpadea continuamente cada 3 segundos de forma
+        infinita.
       </p>
 
       <!-- tipos de display -->
@@ -812,62 +878,36 @@
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex row</div>
             <div class="flex-demo flex-demo-row">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex row-reverse</div>
             <div class="flex-demo flex-demo-row-reverse">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex column</div>
             <div class="flex-demo flex-demo-column">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex column-reverse</div>
-            <div
-              class="flex-demo flex-demo-column-reverse"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-column-reverse">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
         </li>
@@ -879,96 +919,54 @@
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex flex-start</div>
             <div class="flex-demo flex-demo-justify-start">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex flex-end</div>
             <div class="flex-demo flex-demo-justify-end">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex center</div>
             <div class="flex-demo flex-demo-justify-center">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex space-between</div>
-            <div
-              class="flex-demo flex-demo-justify-between"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-justify-between">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex space-around</div>
-            <div
-              class="flex-demo flex-demo-justify-around"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-justify-around">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex space-evenly</div>
-            <div
-              class="flex-demo flex-demo-justify-evenly"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-justify-evenly">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
         </li>
@@ -979,86 +977,46 @@
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex flex-start</div>
-            <div
-              class="flex-demo flex-demo-align-start flex-demo-height"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-align-start flex-demo-height">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex flex-end</div>
-            <div
-              class="flex-demo flex-demo-align-end flex-demo-height"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-align-end flex-demo-height">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex center</div>
-            <div
-              class="flex-demo flex-demo-align-center flex-demo-height"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-align-center flex-demo-height">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex baseline</div>
-            <div
-              class="flex-demo flex-demo-align-baseline flex-demo-height"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-align-baseline flex-demo-height">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex stretch</div>
-            <div
-              class="flex-demo flex-demo-align-stretch flex-demo-height"
-            >
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-align-stretch flex-demo-height">
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
         </li>
@@ -1068,70 +1026,28 @@
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex nowrap</div>
-            <div
-              class="flex-demo flex-demo-nowrap flex-demo-bordered"
-            >
-              <div
-                class="demo-item-coral demo-item-fixed"
-              >
-                Item 1
-              </div>
-              <div
-                class="demo-item-blue demo-item-fixed"
-              >
-                Item 2
-              </div>
-              <div
-                class="demo-item-green demo-item-fixed"
-              >
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-nowrap flex-demo-bordered">
+              <div class="demo-item-coral demo-item-fixed">Item 1</div>
+              <div class="demo-item-blue demo-item-fixed">Item 2</div>
+              <div class="demo-item-green demo-item-fixed">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex wrap</div>
-            <div
-              class="flex-demo flex-demo-wrap flex-demo-bordered"
-            >
-              <div
-                class="demo-item-coral demo-item-fixed"
-              >
-                Item 1
-              </div>
-              <div
-                class="demo-item-blue demo-item-fixed"
-              >
-                Item 2
-              </div>
-              <div
-                class="demo-item-green demo-item-fixed"
-              >
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-wrap flex-demo-bordered">
+              <div class="demo-item-coral demo-item-fixed">Item 1</div>
+              <div class="demo-item-blue demo-item-fixed">Item 2</div>
+              <div class="demo-item-green demo-item-fixed">Item 3</div>
             </div>
           </div>
 
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex wrap-reverse</div>
-            <div
-              class="flex-demo flex-demo-wrap-reverse flex-demo-bordered"
-            >
-              <div
-                class="demo-item-coral demo-item-fixed"
-              >
-                Item 1
-              </div>
-              <div
-                class="demo-item-blue demo-item-fixed"
-              >
-                Item 2
-              </div>
-              <div
-                class="demo-item-green demo-item-fixed"
-              >
-                Item 3
-              </div>
+            <div class="flex-demo flex-demo-wrap-reverse flex-demo-bordered">
+              <div class="demo-item-coral demo-item-fixed">Item 1</div>
+              <div class="demo-item-blue demo-item-fixed">Item 2</div>
+              <div class="demo-item-green demo-item-fixed">Item 3</div>
             </div>
           </div>
         </li>
@@ -1144,15 +1060,9 @@
           <div class="resultado-box">
             <div class="resultado-header">CSS Flex gap</div>
             <div class="flex-demo flex-demo-gap-20">
-              <div class="demo-item-coral">
-                Item 1
-              </div>
-              <div class="demo-item-blue">
-                Item 2
-              </div>
-              <div class="demo-item-green">
-                Item 3
-              </div>
+              <div class="demo-item-coral">Item 1</div>
+              <div class="demo-item-blue">Item 2</div>
+              <div class="demo-item-green">Item 3</div>
             </div>
           </div>
         </li>
@@ -1205,9 +1115,7 @@
         <li>
           <strong>grid-template-columns:</strong> Define el número y tamaño de
           las columnas en la cuadrícula.
-          <code class="red"
-            >grid-template-columns: 100px 200px 1fr;</code
-          >
+          <code class="red">grid-template-columns: 100px 200px 1fr;</code>
         </li>
         <li>
           <strong>grid-auto-rows:</strong> Define el tamaño de las filas en la
